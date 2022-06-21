@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red247\green250\blue248;
+\red248\green250\blue249;\red25\green37\blue46;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c97616\c98401\c97763;
+\cssrgb\c97647\c98431\c98039;\cssrgb\c12941\c19216\c23529;}
+\margl1440\margr1440\vieww18280\viewh14280\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1. db.people.find().pretty()\
+\
+2. \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.people.find().count()\
+\
+3. 
+\f1\fs26 \cf5 \cb6 \strokec5 db.people.find(\{state: "Arizona"\})\
+
+\f0\fs24 \cf2 \cb3 \strokec4 \
+4. db.people.find(\{\
+state: "Arizona", \
+gender: "Male"\
+\})\
+\
+5. db.people.find(\{$or: [\
+  \{state: "Arizona"\}, \
+  \{state: "New Mexico"\}\
+  ]\})\
+\
+6. db.people.find(\{age: \{$lt: 40\}\})\
+\
+7. db.people.find(\
+   \{$or: [\
+     \{age: \{$gte: 40\}\}, \
+  \{age: \{$lte: 45\}\}]\
+  \},\
+  \{gender: "Female", \
+  state: "Florida",\
+ \})\
+\
+8. db.people.find(\{first_name: /^H/\})\
+\
+9. db.people.find(\{state: "Michigan"\}).sort(\{first_name: 1\})\
+\
+10. db.people.find(\{$or: [\
+  \{state: "Virginia"\}, \
+  \{first_name: "Virginia"\}\
+  ]\})\
+\
+11. db.people.find(\{age: \{$lt: 30\}\}, \{first_name: 1, last_name: 1\})\
+\
+12. db.people.find(\{state: "Montana"\}, \{age: false\})\
+\
+13. db.people.find(\{email: /.edu$/\}, \{email: true\})\
+\
+14.\
+\
+15. db.people.find(\{children: \{$size: 0\}\})\
+\
+16. \
+}
